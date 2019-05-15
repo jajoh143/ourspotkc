@@ -1,0 +1,103 @@
+/*
+Theme Name: Our Spot KC
+Theme URI: https://woocommerce.com/storefront/
+Template: storefront
+Author: Jake Johnson
+Description: Our Spot KC Theme, a child theme based on Storefront.
+Tags: e-commerce,two-columns,left-sidebar,right-sidebar,custom-background,custom-colors,custom-header,custom-menu,featured-images,full-width-template,threaded-comments,accessibility-ready,rtl-language-support,footer-widgets,sticky-post,theme-options,editor-style
+Version: 2.4.5.1555085911
+Updated: 2019-04-12 16:18:31
+
+*/
+
+h1,h2,h3,h4 {
+    margin-bottom: 5px; 
+}
+
+a:hover {
+    cursor: pointer !important;
+}
+
+h3 {
+    margin-top: 15px !important; 
+}
+
+.container-fluid {
+    max-width: 1280px; 
+}
+
+
+#masthead {
+      background-color: #781615 !important;
+ }
+
+#masthead .navbar-toggler {
+    margin: 5px;  
+}
+
+
+#masthead a.navbar-brand {
+    padding: 0;
+   margin: 0;
+}
+
+#masthead a.navbar-brand img {
+    margin: 0;  
+}
+#masthead.show {
+   max-height: none;
+} 
+
+#masthead .nav-item .nav-link {
+    color: white;  
+}
+ 
+ #content {
+      padding-top: 24px; 
+ }
+
+#homepage-header {
+  background-image: url("https://ourspotkc.azurewebsites.net/wp-content/uploads/2019/04/josh-wilburne-501963-unsplash.jpg");
+   /* Set a specific height */
+ height: 700px; 
+
+ /* Create the parallax scrolling effect */
+ background-attachment: fixed;
+ background-position: center;
+ background-repeat: no-repeat;
+ background-size: cover;
+}
+
+#homepage-header div {
+    position:absolute;
+     top: 200px;
+   max-width: 500px;
+     left: 50%;
+     transform: translateX(-50%);
+   background-color:#eee;
+     padding: 50px;
+}
+
+.banner {
+    padding: 1rem;
+     margin: 1rem;
+}
+
+.banner-full-width div.col-3 h1,h2,h3,h4 {
+    font-size: 3rem;
+     font-weight: bold;
+}
+
+.card-row .card {
+    min-height: 250px;
+     margin: 5px;
+}
+
+footer {
+    background-color: #781615 !important;
+     
+}
+
+footer h1, footer h2,footer h3,footer h4,footer p,footer span,footer input,footer label,footer a {
+    color: white; 
+}
