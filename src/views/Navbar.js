@@ -6,7 +6,7 @@ class Navbar extends React.Component {
         return (
             <nav id="masthead" className="navbar navbar-expand-lg navbar-light fixed-top">
                 <a className="navbar-brand" href="/">
-                    <img className="navbar-brand" height="40" width="40" alt="Our Spot Logo" src="https://ourspotkc.azurewebsites.net/wp-content/uploads/2019/04/logo-no-text-e1555261115748.png"/>
+                    <img className="navbar-brand" height="30" width="30" alt="Our Spot Logo" src="https://ourspotkc.azurewebsites.net/wp-content/uploads/2019/04/logo-no-text-e1555261115748.png"/>
                 </a>
                 <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
                     aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">

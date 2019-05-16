@@ -8,9 +8,9 @@ function About() {
     };
 
     return (
-        <div>
-            <div class="row">
-                <div class="col-sm-12 col-md-10 col-lg-8 ml-auto mr-auto">
+        <div className="container-fluid">
+            <div className="row">
+                <div className="col-sm-12 col-md-10 col-lg-8 ml-auto mr-auto">
                     <h2 style={titleStyle}>About Us</h2>
                     <hr />
                     <div className="row">
@@ -27,13 +27,13 @@ function About() {
                         </div>
                         <h3>Leadership</h3>
                         <div className="row">
-                            <div class="col-sm-12 col-md-8 col-lg-8">Starzette Palmer is the Executive Director for Our Spot KC. She has over 10 years in planning, organizing and executing community panel discussions, fundraisers, programs, and events engaging the LGBTQ+ community. She is trained in crisis intervention, community mobilization and response, policy creation, data collection, trauma informed care, addiction and recovery, harm reduction, crime prevention through environmental design, event logistics, advocacy, pre and post event procedures, and vendor/entertainment staffing. Overcoming addiction, homelessness and domestic violence was the motivation behind the inception of Our Spot KC and continues to fuel the purpose, vision and mission of the organization.</div>
-                            <div class="col-sm-12 col-md-4 col-lg-4"><img className="img-fluid" src="https://ourspotkc.azurewebsites.net/wp-content/uploads/2019/04/IMG_0677-e1555267007730.jpg" alt="Starzette Profile" width="300" height="150" /></div>
+                            <div className="col-sm-12 col-md-8 col-lg-8">Starzette Palmer is the Executive Director for Our Spot KC. She has over 10 years in planning, organizing and executing community panel discussions, fundraisers, programs, and events engaging the LGBTQ+ community. She is trained in crisis intervention, community mobilization and response, policy creation, data collection, trauma informed care, addiction and recovery, harm reduction, crime prevention through environmental design, event logistics, advocacy, pre and post event procedures, and vendor/entertainment staffing. Overcoming addiction, homelessness and domestic violence was the motivation behind the inception of Our Spot KC and continues to fuel the purpose, vision and mission of the organization.</div>
+                            <div className="col-sm-12 col-md-4 col-lg-4"><img className="img-fluid" src="https://ourspotkc.azurewebsites.net/wp-content/uploads/2019/04/IMG_0677-e1555267007730.jpg" alt="Starzette Profile" width="300" height="150" /></div>
                         </div>
                         <h4>Accomplishments</h4>
                         <div className="row">
                             <div className="col-sm-12 col-md-4 col-sm-2">
-                                <img class="img-fluid" src="https://ourspotkc.azurewebsites.net/wp-content/uploads/2019/04/FB_IMG_1530501236636.jpg" alt="Starzette Profile" width="300" height="150" />
+                                <img className="img-fluid" src="https://ourspotkc.azurewebsites.net/wp-content/uploads/2019/04/FB_IMG_1530501236636.jpg" alt="Starzette Profile" width="300" height="150" />
                             </div>
                             <div className="col-sm-12 col-md-8 col-sm-2">
                                 <ul>
