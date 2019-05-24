@@ -23,8 +23,8 @@ class ResourcesPage extends React.Component {
     };
 
     var categoryList =
-      Object.keys(this.props.resources).length > 0 ? (
-        Object.keys(this.props.resources).map((cat, idx) => (
+      Object.keys(this.props.categories).length > 0 ? (
+        Object.keys(this.props.categories).map((cat, idx) => (
           <div key={idx} className="col col-sm-12 col-md-4 col-lg-3">
             <Card handleClick={() => this.props.chooseCategory(cat)}>
               <h1>{cat}</h1>

@@ -4,7 +4,6 @@ import Home from "./views/Home";
 import About from "./views/About";
 import Blog from "./views/Blog/Blog";
 import Resources from "./views/Resources/Resources";
-import Resource from "./views/Resources/Resource";
 import Navbar from "./views/Shared/Navbar";
 import Events from "./views/Events/Events";
 import Footer from "./views/Shared/Footer";

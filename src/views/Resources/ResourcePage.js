@@ -30,7 +30,7 @@ class ResourcePage extends React.Component {
       <div>
         <ResourceList
           openModal={val => this.openModal(val)}
-          resources={this.props.resource}
+          resource={this.props.resource}
         />
         <ResourceModal
           show={this.state.showModal}

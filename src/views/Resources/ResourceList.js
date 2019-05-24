@@ -14,13 +14,12 @@ function ResourceList(props) {
     minHeight: "750px"
   };
 
-  return typeof props.resources !== "undefined" &&
-    Object.keys(props.resources).length > 0 ? (
-    Object.keys(props.resources).map((content, idx) => (
+  return typeof props.resource !== "undefined" && props.resource.resources ? (
+    props.resource.resources.map((content, idx) => (
       <div className="container-fluid" key={idx}>
-        <h5>{content}</h5>
+        <h5>{props.resource.category}</h5>
         <div className="row">
-          {props.resources[content].map((content, idx) => (
+          {props.resource.resources.map((content, idx) => (
             <div className="col col-12 col-sm-12 col-md-6 col-lg-4" key={idx}>
               <ResourceCard
                 title={content.title.rendered}
