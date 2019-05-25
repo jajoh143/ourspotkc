@@ -52,6 +52,11 @@ class Resources extends React.Component {
 
   componentDidMount() {
     var that = this;
+
+    if (this.props.location.pathname !== this.props.match.url) {
+      this.props.history.push("/resources");
+    }
+
     axios
       .get(
         "https://ourspotkc.azurewebsites.net/wp-json/wp/v2/ourspot_resources"
