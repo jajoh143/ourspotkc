@@ -33,13 +33,13 @@ class Resources extends React.Component {
 
   searchResources(event) {
     event.persist();
-    let searchVal = event.target.value;
+    let searchVal = event.target.value.toLowerCase();
     this.setState({ searchTerm: searchVal });
     let resources = this.state.ogData[this.state.resource.category];
     resources = resources.filter(
       x =>
-        x.title.rendered.includes(searchVal) ||
-        x.content.rendered.includes(searchVal)
+        x.title.rendered.toLowerCase().includes(searchVal) ||
+        x.content.rendered.toLowerCase().includes(searchVal)
     );
 
     var resourceObj = {
