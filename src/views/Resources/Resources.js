@@ -19,6 +19,7 @@ class Resources extends React.Component {
 
     this.searchResources = this.searchResources.bind(this);
     this.chooseCategory = this.chooseCategory.bind(this);
+    this.formatResources = this.formatResources.bind(this);
   }
 
   chooseCategory(category) {
@@ -50,33 +51,46 @@ class Resources extends React.Component {
     this.setState({ resource: resourceObj });
   }
 
+  formatResources(arr) {
+    let recObj = {};
+
+    for (var rec in arr) {
+      let resource = arr[rec];
+      if (!recObj.hasOwnProperty(resource.acf.category)) {
+        recObj[resource.acf.category] = [];
+        recObj[resource.acf.category].push(resource);
+      } else {
+        recObj[resource.acf.category].push(resource);
+      }
+    }
+    return recObj;
+  }
+
   componentDidMount() {
-    var that = this;
+    let that = this,
+      apiUrl =
+        "https://ourspotkc.azurewebsites.net/wp-json/wp/v2/ourspot_resources?per_page=100";
 
     if (this.props.location.pathname !== this.props.match.url) {
       this.props.history.push("/resources");
     }
 
-    axios
-      .get(
-        "https://ourspotkc.azurewebsites.net/wp-json/wp/v2/ourspot_resources"
-      )
-      .then(function(response) {
-        var recs = response.data,
-          recObj = {};
-
-        for (var rec in recs) {
-          let resource = recs[rec];
-          if (!recObj.hasOwnProperty(resource.acf.category)) {
-            recObj[resource.acf.category] = [];
-            recObj[resource.acf.category].push(resource);
-          } else {
-            recObj[resource.acf.category].push(resource);
-          }
+    axios.get(apiUrl).then(resp => {
+      var pages = parseInt(resp.headers["x-wp-totalpages"]);
+      if (pages <= 1) {
+        let res = this.formatResources(resp.data);
+        that.setState({ resources: res, ogData: res });
+      } else {
+        let resources = [];
+        for (let x = 0; x < pages.length; x++) {
+          axios
+            .get(apiUrl + "&page=" + (x + 1))
+            .then(resp => resources.push(resp.data));
         }
-
-        that.setState({ resources: recObj, ogData: recObj });
-      });
+        let res = this.formatResources(resources);
+        that.setState({ resources: res, ogData: res });
+      }
+    });
   }
 
   render() {
