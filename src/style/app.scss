@@ -115,11 +115,11 @@ footer a {
   color: white;
 }
 
-.card {
+.card.actionable {
   transition: 0.25s ease-in background-color;
-}
-.card:hover {
-  background-color: #eee;
-  cursor: pointer;
-  transition: 0.25s ease-in background-color;
+  &:hover {
+    background-color: #eee;
+    cursor: pointer;
+    transition: 0.25s ease-in background-color;
+  }
 }

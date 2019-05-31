@@ -18,7 +18,11 @@ function Card(props) {
     console.log(title);
   }
   return (
-    <div onClick={props.handleClick} className="card" style={cardStyle}>
+    <div
+      onClick={props.handleClick}
+      className="card actionable"
+      style={cardStyle}
+    >
       {title ? <h5 style={cardTitleStyle}>{title}</h5> : ""}
       <div className="card-body d-flex">{props.children}</div>
     </div>

@@ -18,7 +18,11 @@ class ResourceCard extends React.Component {
     };
 
     return (
-      <div onClick={this.props.handleClick} className="card" style={cardStyle}>
+      <div
+        onClick={this.props.handleClick}
+        className="card actionable"
+        style={cardStyle}
+      >
         <h5 style={cardTitleStyle}>{this.props.title}</h5>
         <div className="card-body d-flex">
           <img
