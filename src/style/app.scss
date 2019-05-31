@@ -32,6 +32,7 @@ h3 {
 #masthead {
   background-color: #781615 !important;
   padding: 0 0.5rem 0;
+  max-width: 100vw;
 }
 
 #masthead .navbar-toggler {
@@ -121,5 +122,26 @@ footer a {
     background-color: #eee;
     cursor: pointer;
     transition: 0.25s ease-in background-color;
+  }
+}
+
+#homepage-header__header {
+  height: 300px;
+  width: 300px;
+}
+
+@media only screen and (max-width: 420px) {
+  .banner-full-width {
+    padding: 0;
+    margin: 0;
+  }
+
+  h4 {
+    font-size: 2.5rem;
+  }
+
+  #homepage-header__header {
+    height: 250;
+    width: 250px;
   }
 }

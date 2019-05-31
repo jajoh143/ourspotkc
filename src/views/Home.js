@@ -3,7 +3,8 @@ import React from "react";
 class Home extends React.Component {
   render() {
     var cardStyle = {
-      width: "18rem"
+      width: "100%",
+      minWidth: "15rem"
     };
 
     return (
@@ -13,8 +14,7 @@ class Home extends React.Component {
             <img
               src="https://ourspotkc.azurewebsites.net/wp-content/uploads/2019/04/animation-w-alpha-channel.gif"
               alt="Homepage Logo"
-              height="300"
-              width="300"
+              id="homepage-header__header"
             />
           </div>
         </div>
@@ -47,7 +47,7 @@ class Home extends React.Component {
                 </div>
               </div>
             </div>
-            <div className="col">
+            <div className="col col-sm-12">
               <div className="card" style={cardStyle}>
                 <h2 className="card-img-top text-center">12+</h2>
                 <div className="card-body">
