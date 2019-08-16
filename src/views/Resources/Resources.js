@@ -14,7 +14,8 @@ class Resources extends React.Component {
       ogData: {},
       resource: {},
       showModal: false,
-      searchTerm: ""
+      searchTerm: "",
+      arr: []
     };
 
     this.searchResources = this.searchResources.bind(this);
@@ -85,9 +86,11 @@ class Resources extends React.Component {
           axios
             .get(apiUrl + "&page=" + (x + 1))
             .then(resp => {
-              let newResources = resp.data,
-              formattedResources = that.formatResources(newResources);
-              that.setState({ resources: formattedResources, ogData: formattedResources });
+              let newResources = resp.data;
+              let oldArr = that.state.arr;
+              let newArr = oldArr.concat(newResources);
+              let formattedResources = that.formatResources(newArr);
+              that.setState({ resources: formattedResources, ogData: formattedResources, arr: newArr });
             });
         }
       }
