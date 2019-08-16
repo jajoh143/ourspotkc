@@ -81,14 +81,15 @@ class Resources extends React.Component {
         let res = this.formatResources(resp.data);
         that.setState({ resources: res, ogData: res });
       } else {
-        let resources = [];
-        for (let x = 0; x < pages.length; x++) {
+        for (let x = 0; x < pages; x++) {
           axios
             .get(apiUrl + "&page=" + (x + 1))
-            .then(resp => resources.push(resp.data));
+            .then(resp => {
+              let newResources = resp.data,
+              formattedResources = that.formatResources(newResources);
+              that.setState({ resources: formattedResources, ogData: formattedResources });
+            });
         }
-        let res = this.formatResources(resources);
-        that.setState({ resources: res, ogData: res });
       }
     });
   }
