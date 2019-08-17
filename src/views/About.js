@@ -13,16 +13,16 @@ function About() {
           <h2 style={titleStyle}>About Us</h2>
           <hr />
           <div className="row">
-            <div className="col-sm-12 col-md-4 col-lg-2">
-              <img
+            <div className="col-sm-12 col-md-4 col-lg-3">
+            <img
                 className="img-fluid"
-                src="https://ourspotkc.azurewebsites.net/wp-content/uploads/2019/04/Palmer-Family-Originals-66-e1555268047401.jpg"
-                alt="Palmer Family"
+                src="https://ourspotkc.azurewebsites.net/wp-content/uploads/2019/04/IMG_0677-e1555267007730.jpg"
+                alt="Starzette Profile"
                 width="300"
                 height="150"
               />
             </div>
-            <div className="col-sm-12 col-md-8 col-lg-10">
+            <div className="col-sm-12 col-md-8 col-lg-9">
               <h3>Personal Testimony</h3>
               <p>
                 <b>Everyone needs someone to say, "it's going to be ok!"</b>
@@ -79,10 +79,10 @@ function About() {
               organization.
             </div>
             <div className="col-sm-12 col-md-4 col-lg-4">
-              <img
+            <img
                 className="img-fluid"
-                src="https://ourspotkc.azurewebsites.net/wp-content/uploads/2019/04/IMG_0677-e1555267007730.jpg"
-                alt="Starzette Profile"
+                src="https://ourspotkc.azurewebsites.net/wp-content/uploads/2019/04/Palmer-Family-Originals-66-e1555268047401.jpg"
+                alt="Palmer Family"
                 width="300"
                 height="150"
               />
