@@ -22,7 +22,7 @@ class ResourcesPage extends React.Component {
       margin: "10rem auto 10rem"
     };
     const spinnerStyle = {
-      diplay: "block",
+      display: "block",
       margin: "auto",
       height: "10rem",
       width: "10rem"
