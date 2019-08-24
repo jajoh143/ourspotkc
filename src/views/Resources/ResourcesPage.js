@@ -15,12 +15,18 @@ class ResourcesPage extends React.Component {
   }
 
   render() {
-    const spinnerStyle = {
+    const loaderStyle = {
       height: "15rem",
       width: "15rem",
       display: "block",
       margin: "10rem auto 10rem"
     };
+    const spinnerStyle = {
+      diplay: "block",
+      margin: "auto",
+      height: "10rem",
+      width: "10rem"
+    }
 
     var categoryList =
       Object.keys(this.props.categories).length > 0 ? (
@@ -38,7 +44,11 @@ class ResourcesPage extends React.Component {
           </div>
         ))
       ) : (
-        <Spinner style={spinnerStyle} animation="grow" />
+        <div style={loaderStyle}>
+          <Spinner animation="grow" style={spinnerStyle} />
+          <h5>Loading resources now...</h5>
+        </div>
+       
       );
 
     return (

@@ -22,7 +22,7 @@ function About() {
                 height="150"
               />
             </div>
-            <div className="col-sm-12 col-md-8 col-lg-9">
+            <div className="col-sm-12 col-md-8 col-zlg-9">
               <h3>Personal Testimony</h3>
               <p>
                 <b>Everyone needs someone to say, "it's going to be ok!"</b>
