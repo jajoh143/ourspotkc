@@ -30,19 +30,21 @@ class ResourcesPage extends React.Component {
 
     var categoryList =
       Object.keys(this.props.categories).length > 0 ? (
-        Object.keys(this.props.categories).map((cat, idx) => (
-          <div key={idx} className="col col-sm-12 col-md-4 col-lg-3">
-            <Card handleClick={() => this.props.chooseCategory(cat)}>
+        Object.keys(this.props.categories).map((cat, idx) => {
+          console.log(cat);
+          if (cat && cat.length > 0) {
+            return  <div key={idx} className="col col-sm-12 col-md-4 col-lg-3">
+             <Card handleClick={() => this.props.chooseCategory(cat)}>
               <h1>
-                {cat
-                  ? cat.length >= 20
+                {cat.length >= 20
                     ? cat.substring(0, 20) + "..."
-                    : cat
-                  : "Etc."}
+                    : cat}
               </h1>
             </Card>
-          </div>
-        ))
+            </div>;
+          }
+          
+        })
       ) : (
         <div style={loaderStyle}>
           <Spinner animation="grow" style={spinnerStyle} />
